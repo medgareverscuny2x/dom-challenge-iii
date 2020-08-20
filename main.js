@@ -58,8 +58,16 @@ const addColumn = () => {
     newRow.appendChild(newCell);
     table.appendChild(newRow);
     rows = 1;
-    columns = 1;
+  } else {
+    const currentRows = document.getElementsByTagName("tr");
+    const rowArr = Array.from(currentRows);
+    rowArr.forEach((row) => {
+      const newCell = document.createElement("td");
+      row.appendChild(newCell);
+    });
+    rows++;
   }
+  columns++;
 };
 
 // add an eventlistener:
