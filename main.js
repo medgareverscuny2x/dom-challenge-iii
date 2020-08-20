@@ -61,3 +61,8 @@ const addColumnButton = document.getElementById("add-column-button");
 // loop over the collection (possibly convert to array first)
 // add a column to each row
 // increase the column count
+// const initialRows = 5;
+
+// while (rows < initialRows) {
+//   addRow();
+// }
