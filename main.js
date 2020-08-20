@@ -50,3 +50,14 @@ addRowButton.addEventListener("click", (event) => {
   // add one row to the table
   addRow();
 });
+
+// target the add column button
+const addColumnButton = document.getElementById("add-column-button");
+// add eventlistener
+// check rows and columns
+// if no rows, create a row and add a column
+// else add a column to each row
+// target all the <tr> elements
+// loop over the collection (possibly convert to array first)
+// add a column to each row
+// increase the column count
