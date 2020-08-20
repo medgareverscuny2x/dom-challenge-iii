@@ -110,8 +110,33 @@ const removeRow = () => {
   rows--;
 };
 
-// add event listener to remove row
+// add event listener to removeRowButton
 removeRowButton.addEventListener("click", (event) => {
   console.log("clicked remove row");
   removeRow();
+});
+
+// to removeColumn
+const removeColumn = () => {
+  // check if columns, return if false
+  if (columns === 0) return;
+  // grab currentRows
+  // loop over currentRows
+  const currentRows = document.getElementsByTagName("tr");
+  const rowArr = Array.from(currentRows);
+  // remove the last child element of each Row
+  rowArr.forEach((row) => {
+    row.lastElementChild.remove();
+  });
+  // decrease column count
+  columns--;
+};
+
+// target the remove column button
+const removeColumnButton = document.getElementById("remove-column-button");
+
+// add eventlistener to removeColumnButton
+removeColumnButton.addEventListener("click", (event) => {
+  console.log("clicked remove column");
+  removeColumn();
 });
