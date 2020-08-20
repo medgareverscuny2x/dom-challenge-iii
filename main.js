@@ -93,3 +93,25 @@ addColumnButton.addEventListener("click", (event) => {
 // while (rows < initialRows) {
 //   addRow();
 // }
+
+// target the remove row button
+const removeRowButton = document.getElementById("remove-row-button");
+
+const removeRow = () => {
+  // check if there are any rows
+  if (rows === 0) return;
+  // target the last row
+  const currentRows = document.getElementsByTagName("tr");
+  const rowArr = Array.from(currentRows);
+  const lastRow = rowArr[rowArr.length - 1];
+  // remove the row
+  lastRow.remove();
+  // decrease row count
+  rows--;
+};
+
+// add event listener to remove row
+removeRowButton.addEventListener("click", (event) => {
+  console.log("clicked remove row");
+  removeRow();
+});
